@@ -1,0 +1,17 @@
+name: Reusable Common Steps
+
+on:
+  workflow_call:
+
+jobs:
+  common-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up environment
+        run: echo "Setting up environment..."
+
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: echo "Installing dependencies..."
